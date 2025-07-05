@@ -1,0 +1,134 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/Account",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Account",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/writers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/writers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      },
+      "Key": "wr"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/writers/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/writers/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    //{
+    //  "UpstreamPathTemplate": "/gateway/{everything}/{id}",
+    //  "UpstreamHttpMethod": [ "Get", "Post" ],
+    //  "DownstreamPathTemplate": "/api/{everything}/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5002
+    //    }
+    //  ]
+    //},
+    //{
+    //  "UpstreamPathTemplate": "/gateway/{everything}",
+    //  "UpstreamHttpMethod": [ "Get", "Post" ],
+    //  "DownstreamPathTemplate": "/api/{everything}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5001
+    //    }
+    //  ]
+    //},
+    {
+      "UpstreamPathTemplate": "/gateway/writers",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/writers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Administrator"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/articles",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/articles",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 1
+      },
+      "Key": "ar"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/articles/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/articles/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 1
+      } 
+    }
+  ],
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/gateway/Writersarticles",
+      "RouteKeys": [ "wr", "ar" ]
+    }
+  ]
+}

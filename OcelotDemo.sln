@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Writer.Api", "OcelotDemo\Writer.Api.csproj", "{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Article.Api", "Article.Api\Article.Api.csproj", "{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Article", "Article", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Writer", "Writer", "{369CB01D-A1A7-72D2-AABC-3F0945D148A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateway", "APIGateway", "{75DC84ED-CDF7-48EB-B857-C3ECC5DB311F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{75CB6319-191D-49ED-8EE0-996CDA5DDAC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{45AAFE26-6AB2-4778-A742-C61ED5ED4D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTAuthenticationManager", "JWTAuthenticationManager\JWTAuthenticationManager.csproj", "{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Api", "Authentication.Api\Authentication.Api.csproj", "{7DD85B29-DF93-4B73-9FCC-E587CB11B92A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CB6319-191D-49ED-8EE0-996CDA5DDAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CB6319-191D-49ED-8EE0-996CDA5DDAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CB6319-191D-49ED-8EE0-996CDA5DDAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CB6319-191D-49ED-8EE0-996CDA5DDAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD85B29-DF93-4B73-9FCC-E587CB11B92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD85B29-DF93-4B73-9FCC-E587CB11B92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD85B29-DF93-4B73-9FCC-E587CB11B92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD85B29-DF93-4B73-9FCC-E587CB11B92A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9243FFB-C138-4D80-8E70-CFB6B9E44CE2} = {369CB01D-A1A7-72D2-AABC-3F0945D148A2}
+		{F72A16C4-35D5-4BC0-A935-C3A0121C4BFD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{75CB6319-191D-49ED-8EE0-996CDA5DDAC0} = {75DC84ED-CDF7-48EB-B857-C3ECC5DB311F}
+		{3B37CD71-2E80-397D-4AC2-D5BD79F0E9AC} = {45AAFE26-6AB2-4778-A742-C61ED5ED4D16}
+		{7DD85B29-DF93-4B73-9FCC-E587CB11B92A} = {45AAFE26-6AB2-4778-A742-C61ED5ED4D16}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61FAFF52-8446-45C9-A138-9C8C3C8E1010}
+	EndGlobalSection
+EndGlobal
